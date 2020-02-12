@@ -32,6 +32,6 @@ python main.py <数字>
 
 
 # デモ
-![デモ動画](https://github.com/33taro/gaze_cv/blob/master/img/output.gif "デモ動画")
+![デモ動画](https://github.com/33taro/gaze_cv/blob/master/read_img/demo.gif "デモ動画")
 
 

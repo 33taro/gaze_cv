@@ -53,7 +53,7 @@ def get_iris_from_cam(cam_no):
             img = cv2.circle(img, left_iris['center'], left_iris['radius'], (0, 255, 0), 1)
 
         # 結果の表示
-        cv2.imshow('img', img)
+        cv2.imshow('readme_img', img)
 
         # 'q'が入力されるまでカメラ画像を表示し続ける
         if cv2.waitKey(1) & 0xFF == ord('q'):
