@@ -3,6 +3,7 @@
 import argparse
 import cv2
 from tracking_system import FaceLandmarkManager
+from tracking_system import EyeSystemManager
 
 
 def get_args():
@@ -37,9 +38,19 @@ def get_iris_from_cam(cam_no):
         # 顔のランドマークリストを取得
         face_manager.clear_face_landmark_list()
         face_manager.detect_face_landmark(img)
+        face_landmark_list = face_manager.get_face_landmark_list()
 
-        # 顔のランドマーク描画
-        face_manager.draw_face_landmark_list(img)
+        # 目領域の取得
+        for face_landmark in face_landmark_list:
+            eye_manager = EyeSystemManager()
+            eye_manager.detect_eye_region(face_landmark)
+
+            # 虹彩領域の取得
+            right_iris, left_iris = eye_manager.detect_iris_info(img)
+
+            # 虹彩領域の描画
+            img = cv2.circle(img, right_iris['center'], right_iris['radius'], (0, 255, 0), 1)
+            img = cv2.circle(img, left_iris['center'], left_iris['radius'], (0, 255, 0), 1)
 
         # 結果の表示
         cv2.imshow('img', img)
