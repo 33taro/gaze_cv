@@ -4,7 +4,7 @@ pythonによるOpenCVとdlibを利用した虹彩検出システムです。
 
 # 環境
 * python 3.6
-* OpenCV 3.4
+* OpenCV 4.1
 * dlib 19.18
 
 # 学習モデル
