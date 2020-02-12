@@ -30,8 +30,11 @@ python main.py <数字>
 1台しか接続していない場合は「0」を、3台接続されている内2番めを使いたい場合は「1」を指定してください。
 ※デフォルト(=引数未設定の場合)には「0」が指定されます。
 
+コマンド実行後、カメラ画像が表示され、顔が映ると虹彩を緑の円で検出します。
+本システムを終了する場合、「q」キーを入力してください。
+
 
 # デモ
-![デモ動画](https://github.com/33taro/gaze_cv/blob/master/read_img/demo.gif "デモ動画")
+![デモ動画](https://github.com/33taro/gaze_cv/blob/master/readme_img/demo.gif "デモ動画")
 
 
